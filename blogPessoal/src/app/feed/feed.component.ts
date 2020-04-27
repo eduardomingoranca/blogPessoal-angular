@@ -14,6 +14,7 @@ export class FeedComponent implements OnInit {
   saber quais são os dados, os campos e atributos
   que serão necessários. */
   listaPostagens: Postagem[];
+  postagem: Postagem = new Postagem;
 
 
   // importando os módulos
@@ -43,6 +44,13 @@ export class FeedComponent implements OnInit {
   /* subscribe >> uma palavra reservada para trazer um array, e
   inserir dentro da lista de postagens. */
 
+  /* Publicar >> método responsável por enviar a postagem no servidor */
+  publicar() {
+    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
+      this.postagem = resp;
+      location.assign('/feed');
+    });
+  }
 
 }
 
