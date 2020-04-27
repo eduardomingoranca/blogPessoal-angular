@@ -9,6 +9,9 @@ import { Postagem } from '../model/Postagem';
 })
 export class FeedComponent implements OnInit {
 
+  key = 'data';
+  reverse = true;
+
   // estanciando a class postagem 
   /* estancia/chama a class postagem para 
   saber quais são os dados, os campos e atributos
