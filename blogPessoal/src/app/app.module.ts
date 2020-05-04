@@ -11,6 +11,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { OrderModule } from 'ngx-order-pipe';
+import { EditarComponent } from './editar/editar.component';
 
 @NgModule({
   // declarations --> declara todos os componentes 
@@ -19,7 +20,8 @@ import { OrderModule } from 'ngx-order-pipe';
     HomeComponent,
     FeedComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,
