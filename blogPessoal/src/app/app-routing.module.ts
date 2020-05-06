@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { FeedComponent } from './feed/feed.component';
 import { EditarComponent } from './editar/editar.component';
+import { DeletarComponent } from './deletar/deletar.component';
 
 // criando rotas
 // path --> endereço de acesso
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' }, // quando o path for vazio ele redireciona todo o conteúdo para a página home
   { path: 'home', component: HomeComponent },
   { path: 'feed', component: FeedComponent },
-  { path: 'editar/:id', component: EditarComponent }
+  { path: 'editar/:id', component: EditarComponent },
+  { path: 'deletar/:id', component: DeletarComponent }
 ];
 
 @NgModule({

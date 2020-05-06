@@ -20,6 +20,7 @@ export class FeedComponent implements OnInit {
   postagem: Postagem = new Postagem;
 
 
+  alerta: boolean = false;
   // importando os módulos
   /* importar todos os módulos, essa importação,
   é chamada de injeção de depêndencia  */
@@ -34,6 +35,19 @@ export class FeedComponent implements OnInit {
     this.findAllPostagens();
 
     window.scroll(0, 0);
+
+    let item: string = localStorage.getItem('delOk');
+
+
+    if (item == "true") {
+      this.alerta = true;
+      localStorage.clear();
+
+      setTimeout(() => {
+        location.assign('/feed');
+      }, 3000);
+    }
+
   }
 
   // criando um método/função
